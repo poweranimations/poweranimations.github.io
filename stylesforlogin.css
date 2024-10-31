@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.background {
+    background-image: url('background-image.jpg'); /* Replace with an image similar to Netflix's background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.login-form h2 {
+    margin-bottom: 1rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.or {
+    margin: 1rem 0;
+    color: #aaa;
+}
+
+.signin-code {
+    background: transparent;
+    color: white;
+    border: 1px solid #aaa;
+}
+
+.forgot-password, .new-to a, .recaptcha-info a {
+    color: #aaa;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+    .remember-me input {
+        margin-right: 5px;
+    }
+
+.new-to, .recaptcha-info {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #aaa;
+}
