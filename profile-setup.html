@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile Setup - Game Store</title>
+</head>
+<body>
+    <h1>Setup Your Profile</h1>
+    <form id="profile-setup-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+
+        <label for="profile-pic">Upload Profile Picture:</label>
+        <input type="file" id="profile-pic" accept="image/*">
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <script>
+        document.getElementById('profile-setup-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('username', username);
+            formData.append('email', email);
+            formData.append('password', password);
+            formData.append('profilePic', document.getElementById('profile-pic').files[0]);
+
+            const response = await fetch('/api/users/signup', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                alert('Account created successfully!');
+                window.location.href = 'login.html'; // Redirect to login page
+            } else {
+                alert(data.message); // Show error message
+            }
+        });
+    </script>
+</body>
+</html>

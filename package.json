@@ -1,0 +1,19 @@
+{
+  "name": "game-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "eslint": "^9.13.0"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Game Store</title>
+</head>
+<body>
+    <header>
+        <div class="logo">GameStore</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#feed">Feed</a></li>
+                <li><a href="#library">Library</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <button id="user-profile-button">User Profile</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to the Game Store!</h1>
+        <p>Browse and enjoy our collection of games.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GameStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("user-profile-button").onclick = function () {
+            window.location.href = 'login.html'; // Redirect to login page
+        };
+    </script>
+</body>
+</html>

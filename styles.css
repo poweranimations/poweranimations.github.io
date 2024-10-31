@@ -1,0 +1,284 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background for the entire page */
+    color: #333; /* Dark grey text color */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Center vertically */
+    padding: 15px 30px;
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text color in header */
+}
+
+    header .logo {
+        font-size: 24px; /* Logo font size */
+        font-weight: bold; /* Bold logo text */
+    }
+
+    header nav ul {
+        list-style-type: none; /* Remove bullet points from list */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flex layout for nav items */
+        gap: 20px; /* Space between nav items */
+    }
+
+        header nav ul li {
+            display: inline-block; /* Align items horizontally */
+        }
+
+            header nav ul li a {
+                color: white; /* White text for links */
+                padding: 10px 15px;
+                transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+            }
+
+                header nav ul li a:hover {
+                    background-color: #ff4500; /* Orange background on hover */
+                    color: white; /* Ensure text remains white on hover */
+                    border-radius: 5px; /* Rounded corners on hover */
+                }
+
+/* User Profile Styles */
+.user-profile {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between profile image and text */
+}
+
+    .user-profile img {
+        border-radius: 50%; /* Circular profile image */
+        width: 40px; /* Fixed width for profile image */
+        height: 40px; /* Fixed height for profile image */
+    }
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('path/to/featured-game-background.jpg'); /* Background image for hero section */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background */
+    text-align: center; /* Center text */
+    padding: 100px 0; /* Vertical padding */
+    color: white; /* White text color */
+    position: relative; /* Position for carousel buttons */
+}
+
+    .hero .carousel {
+        position: relative; /* Positioning for carousel controls */
+    }
+
+        .hero .carousel img {
+            max-width: 80%; /* Limit carousel image width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+    /* Carousel Navigation Buttons */
+    .hero .prev, .hero .next {
+        position: absolute; /* Absolute positioning */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for height */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        color: white; /* White text */
+        border: none; /* No border */
+        padding: 10px; /* Padding for buttons */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 24px; /* Font size for icons */
+        border-radius: 50%; /* Circular buttons */
+        width: 40px; /* Fixed width */
+        height: 40px; /* Fixed height */
+    }
+
+    .hero .prev {
+        left: 10px; /* Position left */
+    }
+
+    .hero .next {
+        right: 10px; /* Position right */
+    }
+
+/* Call-to-Action Button Styles */
+.cta-button {
+    margin-top: 30px; /* Top margin */
+    padding: 15px 30px; /* Button padding */
+    font-size: 18px; /* Font size */
+    background-color: #ff4500; /* Primary button color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+    .cta-button:hover {
+        background-color: #ff5733; /* Darker orange on hover */
+    }
+
+/* Featured Games Section */
+.featured-games {
+    padding: 40px 20px; /* Section padding */
+    background-color: #fff; /* White background */
+}
+
+    .featured-games h2 {
+        text-align: center; /* Center title */
+        margin-bottom: 30px; /* Bottom margin */
+    }
+
+.game-grid {
+    display: grid; /* Grid layout for game cards */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between cards */
+}
+
+.game-card {
+    background-color: #f8f8f8; /* Light card background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside cards */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+    .game-card:hover {
+        transform: translateY(-5px); /* Raise card on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
+
+    .game-card img {
+        width: 100%; /* Full width image */
+        height: 150px; /* Fixed height */
+        object-fit: cover; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    .game-card h3 {
+        margin: 10px 0; /* Margin for game title */
+    }
+
+    .game-card button {
+        padding: 10px 20px; /* Button padding */
+        background-color: #333; /* Dark button background */
+        color: white; /* White text */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+        .game-card button:hover {
+            background-color: #ff4500; /* Orange background on hover */
+        }
+
+/* Login Button Styles */
+.login-button {
+    padding: 10px; /* Button padding */
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+    .login-button:hover {
+        background-color: #ff4500; /* Change background on hover */
+    }
+
+/* Social Feed Section */
+.social-feed {
+    padding: 40px 20px; /* Section padding */
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+    .social-feed h2 {
+        text-align: center; /* Center title */
+        margin-bottom: 30px; /* Bottom margin */
+    }
+
+.feed-container {
+    display: flex; /* Flex layout for feed posts */
+    flex-direction: column; /* Column layout */
+    gap: 15px; /* Gap between posts */
+}
+
+.feed-post {
+    background-color: #fff; /* White background for posts */
+    padding: 15px; /* Padding inside posts */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+    .feed-post button {
+        margin-left: 10px; /* Margin left for action buttons */
+        background-color: #333; /* Dark button background */
+        color: white; /* White text */
+        padding: 5px 10px; /* Padding */
+        border: none; /* No border */
+        border-radius: 3px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+        .feed-post button:hover {
+            background-color: #ff4500; /* Orange background on hover */
+        }
+
+/* Footer Styles */
+footer {
+    padding: 20px; /* Footer padding */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+}
+
+.footer-links {
+    margin-top: 10px; /* Margin top for links */
+}
+
+    .footer-links a {
+        color: white; /* White link color */
+        margin: 0 15px; /* Margin between links */
+        transition: color 0.3s ease; /* Smooth transition */
+    }
+
+        .footer-links a:hover {
+            color: #ff4500; /* Change color on hover */
+        }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero .carousel img {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align left */
+    }
+
+    .user-profile img {
+        width: 30px; /* Smaller profile image */
+        height: 30px; /* Smaller profile image */
+    }
+
+    .cta-button {
+        width: 100%; /* Full width for buttons on smaller screens */
+    }
+}
